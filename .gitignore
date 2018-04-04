@@ -8,3 +8,9 @@
 /JavaScript/WebExample/packages.config
 /JavaScript/WebExample/Web.Debug.config
 /.vs
+/.NET/.vs/netExample/v15
+/.NET/Example01/.vs
+/.NET/Example01/bin/Debug/net471
+/.NET/Example01/obj
+/.NET/Example02/bin/Debug/net46
+/.NET/Example02/obj
