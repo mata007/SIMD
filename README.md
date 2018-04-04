@@ -4,7 +4,7 @@
 
 ### Trochu historie
 
-Je to zkratka pro Single Instruction, Multiple Data. 
+**[SIMD](https://en.wikipedia.org/wiki/SIMD)** je zkratka pro Single Instruction, Multiple Data. 
 
 Počátky v architektuře x86 sahají do konce devadesátých let, kdy byla zavedená instrukční sada **[MMX](https://en.wikipedia.org/wiki/MMX_(instruction_set))**. Ta používala zatím jen 64 bitové registry, ale i tehdy jsme mohli zpracovat například 4 16bit, nebo 8 8bit čísel naráz. Následovali **[3DNow!](https://en.wikipedia.org/wiki/3DNow!)**, **SSE**(128bit.), **[AVX](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions)** (256bit), až po poslední Intelácký počin **AVX-512** (už delší dobu v Xeon procesorech a od 2018 v Cannonlake generaci procesorů). 
 
