@@ -3,3 +3,8 @@
 ################################################################################
 
 /JavaScript/.vs
+/JavaScript/packages
+/JavaScript/WebExample/Bin
+/JavaScript/WebExample/packages.config
+/JavaScript/WebExample/Web.Debug.config
+/.vs
