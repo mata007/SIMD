@@ -1,15 +1,15 @@
 # Paralelní zpracování pomocí SIMD
 
- V tomto projektu je něco málo o SIMD a několik jednoduchých příkládků v C# a Javacriptu
+ V tomto projektu je něco málo o SIMD a několik jednoduchých příkládků v C# a JavaScriptu
 
 ### Trochu historie
 
 Je to zkratka pro Single Instruction, Multiple Data. 
 
-Počátky v architektuře x86 sahají do konce devadesátých let, kdy byla zavedená instrukční sada MMX. Ta používala zatím jen 64 bitové registry, ale i tehdy jsme mohli zpracovat například 4 16bit, nebo 8 8bit čísel naráz. Následovali 3DNow!, SSE(128bit.), AVX (256bit), až po poslední Intelácký počin AVX-512 (už delší dobu v Xeon procesorech a od 2018 v Cannonlake generaci procesorů). 
+Počátky v architektuře x86 sahají do konce devadesátých let, kdy byla zavedená instrukční sada **[MMX](https://en.wikipedia.org/wiki/MMX_(instruction_set))**. Ta používala zatím jen 64 bitové registry, ale i tehdy jsme mohli zpracovat například 4 16bit, nebo 8 8bit čísel naráz. Následovali **[3DNow!](https://en.wikipedia.org/wiki/3DNow!)**, **SSE**(128bit.), **[AVX](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions)** (256bit), až po poslední Intelácký počin **AVX-512** (už delší dobu v Xeon procesorech a od 2018 v Cannonlake generaci procesorů). 
 
-Podobné technologie byli i na jiných procesorových architekturách. Na PowerPC už koncem devadesátých let AltiVec (128bit). 
-V ARMech je například technologie NEON (zatím pouze 128bit).
+Podobné technologie byli i na jiných procesorových architekturách. Na PowerPC už koncem devadesátých let **[AltiVec](https://en.wikipedia.org/wiki/AltiVec)** (128bit). 
+V ARMech je například technologie **[NEON](https://en.wikipedia.org/wiki/ARM_architecture#Advanced_SIMD_(NEON))** (zatím pouze 128bit).
 
 ### .NET
 
@@ -50,8 +50,8 @@ public static void SIMDMinMax(ushort[] input, out ushort min, out ushort max)
 
 Podpora SIMD pomalu přichází i do webu.
 
-Původně se plánovalo zavést přímo do ECMAScriptu třídu SIMD, ale nakonec se od toho odstoupilo, jelikož kód stejně hodně ztrácel výkon tím, že to běží ve scriptu.
-Testovací implementace je v Edge a nočních buildech Firefoxu. Rozumně se tato technologie stejně dala využít pouze v asm.js, ale ani tam to není ideální, a tak se rozhodlo, že se to bude implementovat pouze ve WebAssembly.
+Původně se plánovalo zavést přímo do ECMAScriptu třídu **[SIMD](https://developer.mozilla.org/cs/docs/Web/JavaScript/Reference/Global_Objects/SIMD)**, ale nakonec se od toho odstoupilo, jelikož kód stejně hodně ztrácel výkon tím, že to běží ve scriptu.
+Testovací implementace je v Edge a nočních buildech Firefoxu. Rozumně se tato technologie stejně dala využít pouze v asm.js, ale ani tam to není ideální, a tak se rozhodlo, že se to bude implementovat pouze ve **[WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly)**.
 
 Příklady:
 http://peterjensen.github.io/idf2014-simd/idf2014-simd
